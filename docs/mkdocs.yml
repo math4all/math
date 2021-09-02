@@ -78,6 +78,7 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
 
 extra:
+  generator: false
   alternate:
     - name: English
       link: ""
@@ -88,4 +89,4 @@ extra:
       lang: it
 
 
-copyright: © Copyright 2021, Coderockers.
+copyright: © Copyright 2021, Sasso Francesco.
