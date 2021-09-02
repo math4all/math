@@ -12,7 +12,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - run: ls
+      - run: cd ./docs/docs
+      - run: ls
+      - run: echo "ECHO"
       - run: mkdocs gh-deploy --force
