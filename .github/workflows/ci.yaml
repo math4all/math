@@ -19,7 +19,6 @@ jobs:
           ls
           cd docs
           ls
-          chmod +x ci.sh
-          ci.sh
+          pip install -r requirements.txt
         shell: bash
       - run: mkdocs gh-deploy --force
