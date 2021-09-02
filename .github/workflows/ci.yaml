@@ -17,6 +17,8 @@ jobs:
           echo "OOOOOOOOO"
           pwd
           ls
+          cd docs/docs
+          ls
           chmod +x ci.sh
           ci.sh
         shell: bash
