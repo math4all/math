@@ -1,2 +1,2 @@
 # Inizializzazione
-Traduzione non ancora completa.
+Traduzione non ancora completata.
