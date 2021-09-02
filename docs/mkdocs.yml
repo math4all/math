@@ -1,0 +1,91 @@
+site_name: Coderockers
+
+site_url: ""
+
+theme:
+  name: material
+  # favicon: img/favicon.ico
+  features:
+    - content.code.annotate
+    - content.tabs.link
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        en: "English"
+        it: "Italiano"
+      default_language: 'en'
+      no_translation:
+        en: "This page isn't translated to English."
+        it: "Questa pagina non è tradotta in Italiano."
+      translate_nav:
+        en:
+          Getting started: "Getting started"
+          Development tools: "Development tools"
+          Backend: "Backend"
+          Frontend: "Frontend"
+        it:
+          Getting started: "Inizializzazione"
+          Development tools: "Strumenti di sviluppo"
+          Backend: "Backend"
+          Frontend: "Frontend"
+
+
+nav:
+  - Getting started: index.md
+  - Development tools: development.md
+  - Backend: backend.md
+  - Frontend: frontend.md
+  - Update user guide: mkdocs.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/tables.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+
+extra:
+  alternate:
+    - name: English
+      link: ""
+      lang: en
+
+    - name: Italiano
+      link: index.it/
+      lang: it
+
+
+copyright: © Copyright 2021, Coderockers.

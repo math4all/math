@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  docs:
+    container_name: math_docs
+    build:
+      context: ./docs
+      dockerfile: ./Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./docs:/code

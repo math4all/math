@@ -261,3 +261,5 @@ dist
 
 # VS Code
 .vscode
+
+docs/bin/*
