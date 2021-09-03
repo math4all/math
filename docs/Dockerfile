@@ -8,7 +8,8 @@ ENV LIVE_RELOAD_SUPPORT='true' \
     UPDATE_INTERVAL=15
 
 RUN apk update \
-    && apk add --no-cache bash
+    && apk add --no-cache bash \
+    && apk add build-base cairo cairo-tools pango-dev gdk-pixbuf-dev fontconfig
 
 ADD ./requirements.txt /tmp/
 
