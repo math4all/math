@@ -1,5 +1,5 @@
 # Backend
-The application's backend is based on [Django](https://www.djangoproject.com/).
+Application's backend is based on [Django](https://www.djangoproject.com/).
 
 ## Requirements
 In the following, we will list the main requirements used with the related capabilities.

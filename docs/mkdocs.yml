@@ -12,6 +12,11 @@ theme:
 plugins:
   - search
   - pdf-export
+  - mkdocs-jupyter
+  # Uncomment only if you want to export as pdf using mkdocs-with-pdf
+  # - with-pdf:
+  #     render_js: true
+  #     output_path: /code/docs/document.pdf
   - i18n:
       languages:
         en: "English"
@@ -38,6 +43,8 @@ nav:
   - Development tools: development.md
   - Backend: backend.md
   - Frontend: frontend.md
+  - Notebook page: linear_programming.ipynb
+  - Python file: fabfile.py
   - Update user guide: mkdocs.md
 
 markdown_extensions:
