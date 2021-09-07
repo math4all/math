@@ -1,6 +1,6 @@
 site_name: Matematica
-
-site_url: ""
+site_url: "https://math4all.github.io/math/"
+site_author: "Sasso Francesco"
 
 theme:
   name: material
@@ -11,29 +11,31 @@ theme:
 
 plugins:
   - search
-  - pdf-export
+  # - pdf-export
   - mkdocs-jupyter
   # Uncomment only if you want to export as pdf using mkdocs-with-pdf
   # - with-pdf:
+  #     cover_title: "Matematica"
+  #     cover_subtitle: "Corso di Matematica"
   #     render_js: true
   #     output_path: /code/docs/document.pdf
   - i18n:
       languages:
-        en: "English"
         it: "Italiano"
-      default_language: 'en'
+        en: "English"
+      default_language: "it"
       no_translation:
-        en: "This page isn't translated to English."
         it: "Questa pagina non è tradotta in Italiano."
+        en: "This page isn't translated to English."
       translate_nav:
-        en:
-          Getting started: "Getting started"
-          Development tools: "Development tools"
-          Backend: "Backend"
-          Frontend: "Frontend"
         it:
           Getting started: "Inizializzazione"
           Development tools: "Strumenti di sviluppo"
+          Backend: "Backend"
+          Frontend: "Frontend"
+        en:
+          Getting started: "Getting started"
+          Development tools: "Development tools"
           Backend: "Backend"
           Frontend: "Frontend"
 
@@ -43,8 +45,8 @@ nav:
   - Development tools: development.md
   - Backend: backend.md
   - Frontend: frontend.md
-  - Notebook page: linear_programming.ipynb
-  - Python file: fabfile.py
+  # - Notebook page: linear_programming.ipynb
+  # - Python file: fabfile.py
   - Update user guide: mkdocs.md
 
 markdown_extensions:

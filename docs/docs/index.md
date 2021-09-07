@@ -1,78 +1,47 @@
-# Getting started
-This project is a boilerplate application based on [Django](https://www.djangoproject.com/) & [React](https://reactjs.org/). It contains useful examples that are common in
-web development.
+# Introduzione
+Esempi:
 
-## Start the project
-- Clone the repo
-- Install [Docker](https://www.docker.com/products/docker-desktop)
-- Install [Fabric3](https://pypi.org/project/Fabric3/)
-- Add `.env` in `./backend` with content
+$$
+A\in\mathbb{R}
+$$
 
-    ``` text linenums="1" hl_lines="10-12"
-    ENV=develop
+$$
+\lim_{n\to +\infty} f(x) = 1
+$$
 
-    POSTGRES_DB=postgres
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=postgres
-    POSTGRES_HOST=postgres
-    POSTGRES_SSL_MODE=off
-    SECRET_KEY=q$w!oi*7)x$=c#s(9+h@2prnbas$rsy-eh(#xm5fkd(vq3%^7o
+$$
+f(x) = 
+    \begin{cases}
+        1 & -1 \le x < 0\\
+        \frac{1}{2} & x = 0\\
+        x & 0<x\le 1
+    \end{cases}
+$$
 
-    EMAIL_HOST={your-email-host}
-    EMAIL_HOST_USER={your-email-host-user}
-    EMAIL_HOST_PASSWORD={your-email-host-password}
+$$
+\begin{bmatrix}
+    0 & \cdots & 1 \\
+    \vdots & \ddots & \vdots \\
+    0 & \cdots & 0
+\end{bmatrix}
+$$
 
-    DOMAIN=localhost:3000
-    SITE_NAME=socketio
+$$
+\phi_n(\kappa) = \frac{1}{5\pi^2\kappa^2} \int_0^\infty
+\frac{\sin(\kappa R)}{\kappa R} \frac{\partial}{\partial R}\left[R^2\frac{\partial
+D_n(R)}{\partial R}\right]\,dR
+$$
 
-    DEBUGGER=False
-    ```
+$$
+\begin{aligned}
+    a & = b + c \\
+    & = c + d \\
+    & = d + e
+\end{aligned}
+$$
 
-    !!! note
-        Replace `EMAIL_HOST`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD` with your emails credentials.
 
-- Add `.env` in `./postgres` with content
-    ``` text linenums="1"
-    POSTGRES_DB=postgres
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=postgres
-    POSTGRES_HOST=postgres
-    POSTGRES_SSL_MODE=off
-    ```
+Mathematical expression using inline syntax:
 
-- Add `.env` and `.env.local` in `./frontend` with content
-    ``` text linenums="1"
-    NODE_ENV=development
-    REACT_APP_ENV=LOCAL
-    SKIP_PREFLIGHT_CHECK=true
-    REACT_APP_BACKEND_HOST=http://localhost:8000
-    ```
-
-- Add folders `./backend/storage/static` and `./backend/storage/media` that will contain Django's static & media files
-
-- Open terminal at root level of the repo, and run
-    ```
-    (root) ➜ docker-compose run frontend yarn
-    ```
-    This will populate the `./backend/node_modules` folder, enabling ESLint in VS Code (see VS Code setup section)
-
-- Open terminal at root level of the repo, and run
-    ```
-    (root) ➜ docker-compose up
-    ```
-
-- Open another terminal at root level of the repo, and run
-    ```
-    (root) ➜ fab reset_db
-    ```
-
-- Open the browser at [http://localhost:3000](http://localhost:3000) to see the React app, and login using credentials `admin@example.com / Passw0rd!`.
-
-- Open the browser at [http://localhost:8000/admin](http://localhost:8000/admin) to see the Django admin, and login using credentials `admin@example.com / Passw0rd!`.
-
-!!! warning "Windows issues"
-    When running on Windows, be sure to setup Docker to run in Linux mode. Moreover, it can happens that `git` automatically restyled the EOL (End Of Line) of bash files. To avoid this problem, run this global command
-    ```
-    git config --global core.autocrlf input
-    ```
-    This command avoids the EOL (End Of Line) replacement. The latter is due to git which automatically reformat the file based on the current OS. As a conseguence, Linux-style EOL are replaced with Windows-style EOL.
+!!! quote ""
+    The homomorphism $f$ is injective if and only if its kernel is only the singleton set $e_G$, because otherwise $\exists a,b\in G$ with $a\neq b$ such that $f(a)=f(b)$.
