@@ -36,7 +36,7 @@ $$
 \begin{aligned}
     a & = b + c \\
     & = c + d \\
-    & = d + e
+    & = d + e + f
 \end{aligned}
 $$
 

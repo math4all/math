@@ -11,14 +11,8 @@ theme:
 
 plugins:
   - search
-  # - pdf-export
+  - pdf-with-js
   - mkdocs-jupyter
-  # Uncomment only if you want to export as pdf using mkdocs-with-pdf
-  # - with-pdf:
-  #     cover_title: "Matematica"
-  #     cover_subtitle: "Corso di Matematica"
-  #     render_js: true
-  #     output_path: /code/docs/document.pdf
   - i18n:
       languages:
         it: "Italiano"

@@ -16,7 +16,7 @@ RUN apk update \
 RUN apk add --no-cache make
 
 # Headless Chrome
-RUN apk --update --upgrade --no-cache add udev chromium \
+RUN apk --update --upgrade --no-cache add udev chromium chromium-chromedriver \
     && chromium-browser --version
 
 ADD ./requirements.txt /tmp/
