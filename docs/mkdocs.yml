@@ -23,22 +23,13 @@ plugins:
         en: "This page isn't translated to English."
       translate_nav:
         it:
-          Getting started: "Inizializzazione"
-          Development tools: "Strumenti di sviluppo"
-          Backend: "Backend"
-          Frontend: "Frontend"
+          Getting started: "Introduzione"
         en:
-          Getting started: "Getting started"
-          Development tools: "Development tools"
-          Backend: "Backend"
-          Frontend: "Frontend"
+          Getting started: "Introduction"
 
 
 nav:
   - Getting started: index.md
-  - Development tools: development.md
-  - Backend: backend.md
-  - Frontend: frontend.md
   # - Notebook page: linear_programming.ipynb
   # - Python file: fabfile.py
   - Update user guide: mkdocs.md

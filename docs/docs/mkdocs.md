@@ -320,6 +320,11 @@ ___
   <figcaption><small>Fig.1 - GIF example with caption.</small></figcaption>
 </figure>
 ___
+### Draw.io diagrams
+
+![Label](diagram/math.drawio)
+
+___
 ### MathJax
 [MathJax](https://www.mathjax.org/) is a beautiful and accessible way to display mathematical content in the browser.
 
