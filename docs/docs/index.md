@@ -128,8 +128,61 @@ Il suddetto problema può risolversi tramite l'algoritmo del simplesso. Il grafi
 - Le linee gialle sono relative ai vincoli $0 \leq x_1 \leq 24$.
 - La decisionale ottimale coincide con l'intersezione delle linee rossa e blu, ed è $(\hat{x}_0, \hat{x}_1) = (8, 6)$ e il relativo costo ottimale è $f(\hat{x}_0, \hat{x}_1) = 108000$.
 
-![Logo](img/linear_programming.png)
+![Linear Programming](img/linear_programming.png)
 
 ### Compressione di immagini
-TBD
+Capita spesso di dovere ottimizzare lo spazio di memoria dei dispositivi per consentirne una maggiore capacità. In tal caso, gli algoritmi di compressione delle immagini possono venire in nostro aiuto. Tra questi, uno dei più famosi è l'algoritmo JPEG. Cerchiamo di spiegare come funzione attraverso un esempio. Consideriamo la seguente immagine elementare (un blocco composto da $8 \times 8$ pixel):
 
+![JPEG - Original](img/orig_jpeg.png)
+
+Tale immagine viene espressa matematicamente dalla matrice $8 \times 8$:
+
+$$
+g = \left[{\begin{array}{rrrrrrrr}52&55&61&66&70&61&64&73\\63&59&55&90&109&85&69&72\\62&59&68&113&144&104&66&73\\63&58&71&122&154&106&70&69\\67&61&68&104&126&88&68&70\\79&65&60&70&77&68&58&75\\85&71&64&59&55&61&65&83\\87&79&69&68&65&76&78&94\end{array}}\right]
+$$
+
+L'obiettivo è quello di ridurre la dimensionalità di tale immagine. Per far ciò si utilizza uno strumento matematico noto come _Trasformata discreta del coseno_, indicata anche on DCT, la cui formula è la seguente:
+
+$$
+\ G_{u,v}={\frac {1}{4}}\alpha (u)\alpha (v)\sum _{x=0}^{7}\sum _{y=0}^{7}g_{x,y}\cos \left[{\frac {(2x+1)u\pi }{16}}\right]\cos \left[{\frac {(2y+1)v\pi }{16}}\right]
+$$
+
+dove:
+
+- $u$ è la frequenza spaziale orizzontale, con $0\leq u\leq 8$.
+- $v$ è la frequenza spaziale verticale, con $0\leq v\leq 8$.
+- $\alpha (u)={\begin{cases}{\frac {1}{\sqrt {2}}},&{\mbox{if }}u=0\\1,&{\mbox{otherwise}}\end{cases}}$ è un fattore normalizzante.
+- $g_{x,y}$ is the pixel value at coordinates $(x,y)$.
+- $G_{u,v}$ is the DCT coefficient at coordinates $(u,v)$.
+
+Tale DCT viene utilizzata per estrarre i valori energetici corrispondenti a ciascuna frequenza. Se eseguiamo questa trasformazione sulla nostra matrice sopra, otteniamo quanto segue:
+
+$$G={\begin{array}{c}u\\\longrightarrow \\\left[{\begin{array}{rrrrrrrr}-415.38&-30.19&-61.20&27.24&56.12&-20.10&-2.39&0.46\\4.47&-21.86&-60.76&10.25&13.15&-7.09&-8.54&4.88\\-46.83&7.37&77.13&-24.56&-28.91&9.93&5.42&-5.65\\-48.53&12.07&34.10&-14.76&-10.24&6.30&1.83&1.95\\12.12&-6.55&-13.20&-3.95&-1.87&1.75&-2.79&3.14\\-7.73&2.91&2.38&-5.94&-2.38&0.94&4.30&1.85\\-1.03&0.18&0.42&-2.42&-0.88&-3.02&4.12&-0.66\\-0.17&0.14&-1.07&-4.19&-1.17&-0.10&0.50&1.68\end{array}}\right]\end{array}}{\Bigg \downarrow }v.$$
+
+Si noti come la maggior parte dell'energia sia contenuta nelle frequenze più basse (ossia all'angolo in alto a sinistra). Questo aspetto è importante e ci dice in pratica che l'occhio umano distingue meglio le basse frequenze, mentre le alte frequenza rilasciano una informazione trascurabile.
+
+A questo punto, per mettere meglio in risalto questo aspetto, si procede a una quantizzazione dell'immagine. In pratica, presa la matrice di quantizzazione:
+
+$$
+Q={\begin{bmatrix}16&11&10&16&24&40&51&61\\12&12&14&19&26&58&60&55\\14&13&16&24&40&57&69&56\\14&17&22&29&51&87&80&62\\18&22&37&56&68&109&103&77\\24&35&55&64&81&104&113&92\\49&64&78&87&103&121&120&101\\72&92&95&98&112&100&103&99\end{bmatrix}}
+$$
+
+la DCT quantizzata si definisce come:
+
+$$
+B_{j,k}=\mathrm {round} \left({\frac {G_{j,k}}{Q_{j,k}}}\right){\mbox{ for }}j=0,1,2,\ldots ,7;k=0,1,2,\ldots,7
+$$
+
+In questo esempio specifico si ottiene:
+
+$$
+B=\left[{\begin{array}{rrrrrrrr}-26&-3&-6&2&2&-1&0&0\\0&-2&-4&1&1&0&0&0\\-3&1&5&-1&-1&0&0&0\\-3&1&2&-1&0&0&0&0\\1&0&0&0&0&0&0&0\\0&0&0&0&0&0&0&0\\0&0&0&0&0&0&0&0\\0&0&0&0&0&0&0&0\end{array}}\right].
+$$
+
+Si noti come l'operazione di quantizzazione abbia effettivamente ridotto il numero di coefficienti non nulli della matrice. Questi e solo questi verranno infine memorizzati costituendo l'immagine compressa in formato JPEG.
+
+L'operazione di decodifica segue il processo inverso e porterà alla visualizzazione dell'immagine JPEG seguente:
+
+![JPEG - Compressed](img/compressed_jpeg.png)
+
+Che è molto simile a quella originale.
