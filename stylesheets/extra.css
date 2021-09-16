@@ -1,0 +1,6 @@
+:root {
+  --md-primary-fg-color:#2E60A9;
+}
+.md-typeset div.arithmatex {
+  overflow: unset;
+}

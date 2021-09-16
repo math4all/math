@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://math4all.github.io/math/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://math4all.github.io/math/fabfile/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://math4all.github.io/math/index.en/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://math4all.github.io/math/linear_programming/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://math4all.github.io/math/mkdocs/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
